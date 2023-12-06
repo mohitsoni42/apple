@@ -1,6 +1,0 @@
-image: python:3.8
-
-test:
-  script:
-    - pip install django     # to install all the dependency (only django is needed)
-    - python manage.py test   # run tests
