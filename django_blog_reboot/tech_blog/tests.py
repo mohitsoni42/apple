@@ -1,6 +1,7 @@
 from django.test import TestCase
 from .models import ArticleModel
-
+from datetime import datetime
+from django.utils import timezone
 
 # Create your tests here.
 class HomeTest(TestCase):
