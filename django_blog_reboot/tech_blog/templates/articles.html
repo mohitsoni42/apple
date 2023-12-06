@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Articles</title>
+
+    <style>
+        input{display: block;}
+        label{display: block;}
+    </style>
+</head>
+<body>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Create Article">
+    </form>
+    <ul>
+        {% for article in articles%}
+        <li>
+            <p>Title : {{article.title}}</p>
+            <p>author : {{article.author}}</p>
+            <p>category : {{article.category}}</p>
+            <p><a href="http://127.0.0.1:8123/tech-blog/articles/{{article.id}}">Content</a></p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
